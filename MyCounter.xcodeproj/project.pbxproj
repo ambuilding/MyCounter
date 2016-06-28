@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		305452491C83E8BE0045BF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305452481C83E8BE0045BF71 /* AppDelegate.swift */; };
-		3054524B1C83E8BE0045BF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054524A1C83E8BE0045BF71 /* ViewController.swift */; };
 		3054524E1C83E8BE0045BF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3054524C1C83E8BE0045BF71 /* Main.storyboard */; };
 		305452501C83E8BE0045BF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3054524F1C83E8BE0045BF71 /* Assets.xcassets */; };
 		305452531C83E8BE0045BF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305452511C83E8BE0045BF71 /* LaunchScreen.storyboard */; };
 		3054525E1C83E8BE0045BF71 /* MyCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054525D1C83E8BE0045BF71 /* MyCounterTests.swift */; };
 		305452691C83E8BE0045BF71 /* MyCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305452681C83E8BE0045BF71 /* MyCounterUITests.swift */; };
+		305452771C83E9B80045BF71 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305452761C83E9B80045BF71 /* CounterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		305452451C83E8BE0045BF71 /* MyCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305452481C83E8BE0045BF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3054524A1C83E8BE0045BF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3054524D1C83E8BE0045BF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3054524F1C83E8BE0045BF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		305452521C83E8BE0045BF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		305452641C83E8BE0045BF71 /* MyCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		305452681C83E8BE0045BF71 /* MyCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCounterUITests.swift; sourceTree = "<group>"; };
 		3054526A1C83E8BE0045BF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305452761C83E9B80045BF71 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,9 @@
 		305452471C83E8BE0045BF71 /* MyCounter */ = {
 			isa = PBXGroup;
 			children = (
-				305452481C83E8BE0045BF71 /* AppDelegate.swift */,
-				3054524A1C83E8BE0045BF71 /* ViewController.swift */,
+				305452761C83E9B80045BF71 /* CounterViewController.swift */,
 				3054524C1C83E8BE0045BF71 /* Main.storyboard */,
-				3054524F1C83E8BE0045BF71 /* Assets.xcassets */,
-				305452511C83E8BE0045BF71 /* LaunchScreen.storyboard */,
-				305452541C83E8BE0045BF71 /* Info.plist */,
+				30EF5EBA1D19362E00290621 /* Supporting Files */,
 			);
 			path = MyCounter;
 			sourceTree = "<group>";
@@ -123,6 +120,17 @@
 				3054526A1C83E8BE0045BF71 /* Info.plist */,
 			);
 			path = MyCounterUITests;
+			sourceTree = "<group>";
+		};
+		30EF5EBA1D19362E00290621 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				305452481C83E8BE0045BF71 /* AppDelegate.swift */,
+				3054524F1C83E8BE0045BF71 /* Assets.xcassets */,
+				305452511C83E8BE0045BF71 /* LaunchScreen.storyboard */,
+				305452541C83E8BE0045BF71 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3054524B1C83E8BE0045BF71 /* ViewController.swift in Sources */,
+				305452771C83E9B80045BF71 /* CounterViewController.swift in Sources */,
 				305452491C83E8BE0045BF71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +493,7 @@
 				3054526F1C83E8BE0045BF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		305452701C83E8BE0045BF71 /* Build configuration list for PBXNativeTarget "MyCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +502,7 @@
 				305452721C83E8BE0045BF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		305452731C83E8BE0045BF71 /* Build configuration list for PBXNativeTarget "MyCounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +511,7 @@
 				305452751C83E8BE0045BF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

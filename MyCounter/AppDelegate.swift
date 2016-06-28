@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         // Override point for customization after application launch.
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window!.backgroundColor = UIColor.whiteColor()
+//        self.window!.makeKeyAndVisible()
+        // 默认实现
+        // 获取屏幕的尺寸，创建一个跟屏幕一样大小的窗口：背景色，白色；调用makeKeyAndVisible()方法将此窗口显示在屏幕上
+
+        
+        self.window!.rootViewController = CounterViewController()
+        //将CounterViewController的view跟app中唯一的窗口Window关联起来。
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))
+        //本地消息需要获得用户许可 register notification
+        
         return true
     }
 
